@@ -39,7 +39,8 @@ const I18N = {
     wifiInfo: "Free Public Wi-Fi 'Public WiFi Free' is available at major tourist spots & Ganghwa Bus Terminal.",
     currencyInfo: "Credit cards accepted almost everywhere. Small food vendors in traditional markets accept cash.",
     addedToPlanMsg: "Added to your travel plan!",
-    removedFromPlanMsg: "Removed from your plan."
+    removedFromPlanMsg: "Removed from your plan.",
+    ganghwaGov: "Ganghwa County"
   },
   ko: {
     appTitle: "디스커버 강화 (Discover Ganghwa)",
@@ -79,7 +80,8 @@ const I18N = {
     wifiInfo: "주요 관광지 및 강화버스터미널에서 공공 와이파이 'Public WiFi Free' 이용 가능",
     currencyInfo: "대부분의 매장에서 신용카드 사용 가능. 전통시장 일부 점포 현금 권장",
     addedToPlanMsg: "일정에 추가되었습니다!",
-    removedFromPlanMsg: "일정에서 삭제되었습니다."
+    removedFromPlanMsg: "일정에서 삭제되었습니다.",
+    ganghwaGov: "강화군청"
   },
   ja: {
     appTitle: "ディスカバー江華 (Discover Ganghwa)",
@@ -119,7 +121,8 @@ const I18N = {
     wifiInfo: "主要観光地および江華バスターミナルで無料Wi-Fiが利用可能",
     currencyInfo: "ほぼ全ての場所でクレジットカード利用可能。伝統市場の一部店舗では現金推奨",
     addedToPlanMsg: "プランに追加しました！",
-    removedFromPlanMsg: "プランから削除しました。"
+    removedFromPlanMsg: "プランから削除しました。",
+    ganghwaGov: "江華郡庁"
   },
   zh: {
     appTitle: "探索江华 (Discover Ganghwa)",
@@ -159,7 +162,8 @@ const I18N = {
     wifiInfo: "主要景点及江华客运站均提供 'Public WiFi Free' 免费公共Wi-Fi。",
     currencyInfo: "绝大多数店铺支持信用卡支付，传统市场部分小吃摊建议准备少量现金。",
     addedToPlanMsg: "已添加至行程计划！",
-    removedFromPlanMsg: "已从行程中移除。"
+    removedFromPlanMsg: "已从行程中移除。",
+    ganghwaGov: "江华郡厅"
   }
 };
 

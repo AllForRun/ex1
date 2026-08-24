@@ -109,6 +109,27 @@ body {
   box-shadow: 0 0 10px rgba(59, 130, 246, 0.3);
 }
 
+.ganghwa-gov-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(30, 41, 59, 0.9);
+  color: var(--text-main);
+  border: 1px solid var(--border-color);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.ganghwa-gov-btn:hover {
+  border-color: #38bdf8;
+  color: #38bdf8;
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.35);
+}
+
 /* Hero Section */
 .hero {
   position: relative;
