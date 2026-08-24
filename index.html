@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discover Ganghwa - Tourist Guide for International Visitors</title>
+  <meta name="description"
+    content="Official interactive guide to Ganghwa Island (Incheon, Korea) for international travelers. Explore UNESCO heritage, beaches, DMZ views, food, and custom travel itineraries in EN, KO, JA, ZH.">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Top Navigation / Header -->
+  <header class="header">
+    <div class="header-container">
+      <div class="logo-group">
+        <span class="logo-icon">🏝️</span>
+        <div>
+          <h1 class="app-title" data-i18n="appTitle">Discover Ganghwa</h1>
+          <p class="app-subtitle" data-i18n="appSubTitle">History, Peace & Nature of Korea's Historic Island</p>
+        </div>
+      </div>
+
+      <div class="controls-group">
+        <div class="lang-select-wrapper">
+          <select id="lang-select" class="lang-select" aria-label="Select Language">
+            <option value="en" selected>🌐 English</option>
+            <option value="ko">🇰🇷 한국어</option>
+            <option value="ja">🇯🇵 日本語</option>
+            <option value="zh">🇨🇳 中文</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section & Search -->
+  <section class="hero">
+    <h2 class="hero-title" data-i18n="appTitle">Discover Ganghwa</h2>
+    <p class="hero-subtitle" data-i18n="appSubTitle">History, Peace & Nature of Korea's Historic Island</p>
+
+    <div class="search-box-container">
+      <span class="search-icon">🔍</span>
+      <input type="text" id="search-input" class="search-input"
+        placeholder="Search attractions, food, historical sites..." />
+    </div>
+  </section>
+
+  <!-- Category Filter Bar -->
+  <nav class="category-bar">
+    <button class="cat-btn active" data-cat="all">✨ <span data-i18n="all">All Spots</span></button>
+    <button class="cat-btn" data-cat="history">🏛️ <span data-i18n="history">History & Heritage</span></button>
+    <button class="cat-btn" data-cat="nature">🌅 <span data-i18n="nature">Nature & Beach</span></button>
+    <button class="cat-btn" data-cat="culture">☕ <span data-i18n="culture">Culture & Cafe</span></button>
+    <button class="cat-btn" data-cat="food">🍲 <span data-i18n="food">Local Food</span></button>
+    <button class="cat-btn" data-cat="experience">🎢 <span data-i18n="experience">Activities & Fun</span></button>
+  </nav>
+
+  <!-- Main Content Area -->
+  <main class="main-container">
+
+    <!-- Custom Travel Plan Banner -->
+    <section class="itinerary-banner">
+      <div class="section-header" style="margin-bottom:0.5rem;">
+        <h3 class="section-title" style="font-size:1.4rem;">🗺️ <span data-i18n="customItinerary">My Travel Plan</span>
+        </h3>
+        <button class="btn btn-outline" style="font-size:0.75rem; padding:0.3rem 0.75rem;" onclick="clearAllPlan()"
+          data-i18n="clearPlan">Clear All</button>
+      </div>
+      <div id="itinerary-list" class="itinerary-list">
+        <!-- Dynamic itinerary items -->
+      </div>
+    </section>
+
+    <!-- Attractions Grid -->
+    <section>
+      <div class="section-header">
+        <h2 class="section-title">📍 Ganghwa Top Highlights</h2>
+      </div>
+      <div id="attractions-grid" class="attractions-grid">
+        <!-- Dynamic attraction cards populated via JS -->
+      </div>
+    </section>
+
+    <!-- Recommended Courses -->
+    <section class="courses-section">
+      <div class="section-header">
+        <h2 class="section-title">🗺️ <span data-i18n="recommendedCourses">Recommended Itineraries</span></h2>
+      </div>
+      <div id="courses-grid" class="courses-grid">
+        <!-- Dynamic courses -->
+      </div>
+    </section>
+
+    <!-- Essential Travel Info -->
+    <section class="info-section">
+      <div class="section-header">
+        <h2 class="section-title">💡 <span data-i18n="travelInfo">Travel Essentials</span></h2>
+      </div>
+
+      <div class="info-grid">
+        <!-- Directions -->
+        <div class="info-card">
+          <div class="info-card-header">
+            🚌 <span data-i18n="directions">Transportation & Directions</span>
+          </div>
+          <div style="font-size:0.9rem; display:flex; flex-direction:column; gap:0.75rem; color:var(--text-muted);">
+            <div>
+              <strong style="color:var(--text-main);" data-i18n="fromSeoul">From Seoul:</strong>
+              <p data-i18n="busInfoSeoul">Take Sinchon/Hongdae Bus #3000 or Gimpo Goldline to Gurae Station -> Bus #60-3
+                / #70 to Ganghwa Bus Terminal.</p>
+            </div>
+            <div>
+              <strong style="color:var(--text-main);" data-i18n="fromAirport">From Incheon Airport (ICN):</strong>
+              <p data-i18n="busInfoAirport">Take Bus #308 from ICN Terminal 1 to Gimpo -> Transfer to Ganghwa-bound Bus
+                #70 or #90.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Emergency Hotline -->
+        <div class="info-card">
+          <div class="info-card-header">
+            📞 <span data-i18n="emergency">Emergency & Tourist Hotline</span>
+          </div>
+          <div style="font-size:0.9rem; display:flex; flex-direction:column; gap:0.75rem; color:var(--text-muted);">
+            <div>
+              <strong style="color:#ef4444;">1330 Korea Travel Hotline</strong>
+              <p data-i18n="hotlineInfo">Call 1330 (Korea Travel Hotline) - Free 24/7 translation support in English,
+                Japanese, Mandarin, and Russian.</p>
+            </div>
+            <div>
+              <strong style="color:var(--text-main);">Police: 112 | Ambulance/Fire: 119</strong>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tips -->
+        <div class="info-card">
+          <div class="info-card-header">
+            💳 <span data-i18n="tips">Practical Tips</span>
+          </div>
+          <div style="font-size:0.9rem; display:flex; flex-direction:column; gap:0.75rem; color:var(--text-muted);">
+            <div>
+              <strong style="color:var(--text-main);">Public Wi-Fi & Currency:</strong>
+              <p data-i18n="wifiInfo">Free Public Wi-Fi 'Public WiFi Free' is available at major tourist spots & Ganghwa
+                Bus Terminal.</p>
+              <p style="margin-top:0.3rem;" data-i18n="currencyInfo">Credit cards accepted almost everywhere. Small food
+                vendors in traditional markets accept cash.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Attraction Detail Modal Overlay -->
+  <div id="modal-overlay" class="modal-overlay" onclick="closeModal()">
+    <div class="modal-box" onclick="event.stopPropagation()">
+      <button class="modal-close-btn" onclick="closeModal()" aria-label="Close Modal">✕</button>
+      <div id="modal-body-content" class="modal-body">
+        <!-- Content inserted dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Container -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2026 Discover Ganghwa - Travel Guide for International Visitors | Ganghwa-gun, Incheon, Republic of Korea</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+
+</html>
